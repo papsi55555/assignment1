@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import data from "./example_data.json";
+import Bartop from "./component/Bartop.js";
+import Menu from "./component/Menu.js";
+import PlaceList from "./component/PlaceList";
+import React, { Component } from "react";
 
 function App() {
+  console.log(data);
+  data.map((data) => {});
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Bartop />
+      <div className="content">
+        <Menu />
+        <div className="top-down">
+          
+          <PlaceList />
+        </div>
+      </div>
     </div>
   );
 }

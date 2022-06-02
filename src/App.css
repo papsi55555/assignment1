@@ -1,38 +1,231 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: Kanit-Medium;
+  src: url(./font/Kanit-Medium.ttf);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: Kanit-Regular;
+  src: url(./font/Kanit-Regular.ttf);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  /* height: 150vh; */
+  overflow-y: scroll;
+  background-color: #e0e0e0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content {
+  display: flex;
+}
+
+/* ---------------------- Bar top ---------------------- */
+
+.bartop {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  z-index: 2;
+
+  background: #134b8a;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+.bargroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bargroup div {
+  line-height: 100%;
+}
+
+.bell {
+  margin-right: 21.18px;
+}
+
+.bell div {
+  position: absolute;
+  z-index: 1;
+  transform: translate(9px, -4px);
+}
+
+.profile {
+  margin-right: 11.5px;
+}
+
+.name {
+  margin-right: 11px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.vector {
+  margin-right: 28px;
+}
+
+/* ---------------------- Menu left ---------------------- */
+
+.menu {
+  position: fixed;
+  width: 90px;
+  height: 100vh;
+  z-index: 3;
+
+  background: #ffffff;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 50px 50px 0px;
+}
+
+.menu-group {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  height: 90px;
+}
+
+.logo {
+  /* position: absolute; */
+  margin-top: 25px;
+}
+
+.line-m1 {
+  /* Vector 79 */
+  margin-top: 0px;
+  /* position: absolute; */
+}
+
+.icon1 {
+  display: flex;
+  margin-top: 26px;
+  width: 36px;
+  height: 36px;
+
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+
+  background: #0f1e56;
+  border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.icon2 {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icon3 {
+  position: absolute;
+  transform: translateY(-5px);
+}
+
+.place {
+  text-align: center;
+  width: 31px;
+  height: 20px;
+  margin-top: 2px;
+
+  font-family: "Kanit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 166%;
+  letter-spacing: 0.15px;
+
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.line-m2 {
+  margin-top: 25px;
+}
+
+/* ---------------------- Place List ---------------------- */
+
+.placelist {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  padding: 80px 36px 0 131px;
+}
+
+.list {
+  /* padding: 80px 36px 0 131px; */
+
+  width: 104px;
+  height: 32px;
+
+  font-family: "Kanit-Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 133.4%;
+
+  color: #000000;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.box-search {
+  display: flex;
+  max-height: 40px;
+  justify-content: center;
+}
+
+.line-p {
+  align-items: center;
+  margin: 6px 14px;
+}
+
+/* enable absolute positioning */
+.inner-addon {
+  position: relative;
+}
+
+/* style glyph */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align glyph */
+.left-addon .glyphicon {
+  left: 5px;
+}
+.right-addon .glyphicon {
+  right: 5px;
+}
+
+/* add padding  */
+.left-addon input {
+  padding-left: 30px;
+}
+.right-addon input {
+  padding-right: 30px;
+}
+
+.form-control {
+  line-height: 100%;
+  width: 400px;
+  height: 40px;
+  border-radius: 50px;
+  padding: 0 17px;
+  font-size: 14px;
+
+  border-color: #134b8a;
+}
+
+.uil-search {
+  font-size: 14px;
+}
+
+.inner-addon {
 }
